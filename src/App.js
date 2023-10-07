@@ -8,6 +8,9 @@ import HistoryComponent from "./components/HistoryComponent";
 import MerchComponent from "./components/MerchComponent";
 import PublicationsComponent from "./components/PublicationsComponent";
 import StartComponent from "./components/StartComponent";
+import LoginComponent from "./components/LoginComponent";
+import DashboardComponent from "./components/DashboardComponent";
+import RegisterComponent from './components/RegisterComponent';
 
 export default function App() {
   const [user, setUser] = useState(null);
@@ -34,6 +37,9 @@ export default function App() {
           <Route path="H-C" element={<HistoryComponent user={user} />} />
           <Route path="M-C" element={<MerchComponent user={user} />} />
           <Route path="P-C" element={<PublicationsComponent user={user} />} />
+          <Route path="R-C" element={<RegisterComponent />} />
+          <Route path="L-C" element={<LoginComponent />} />
+          <Route path="D-C" element={<DashboardComponent />} />
         </Routes>
       </BrowserRouter>
     </div>
